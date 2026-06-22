@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==========================================================================
+   MENÚ PRINCIPAL / QMENUBAR
+   ========================================================================== */
+
+QMenuBar {
+    background-color: #181818;
+    color: #E8D9A8;
+    border-bottom: 1px solid #6E5A1E;
+    spacing: 5px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 15px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #2A2A2A;
+    color: #F5D76E;
+}
+
+QMenuBar::item:pressed {
+    background-color: #D4AF37;
+    color: #121212;
+}
+
+/* ==========================================================================
+   MENÚ DESPLEGABLE / QMENU
+   ========================================================================== */
+
+QMenu {
+    background-color: #1B1B1B;
+    color: #E8D9A8;
+    border: 1px solid #6E5A1E;
+    padding: 5px;
+}
+
+QMenu::item {
+    padding: 8px 30px 8px 25px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+QMenu::item:selected {
+    background-color: #D4AF37;
+    color: #121212;
+}
+
+QMenu::item:disabled {
+    color: #666666;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #6E5A1E;
+    margin: 5px 10px;
+}
+
+/* ==========================================================================
+   ICONOS Y CHECKS
+   ========================================================================== */
+
+QMenu::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QMenu::indicator:checked {
+    background-color: #D4AF37;
+    border: 1px solid #F5D76E;
+    border-radius: 3px;
+}
+
+QMenu::right-arrow {
+    width: 10px;
+    height: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEstructuras">
+    <property name="title">
+     <string>Estructuras</string>
+    </property>
+    <widget class="QMenu" name="menuLineales">
+     <property name="title">
+      <string>Lineales </string>
+     </property>
+     <addaction name="actionLista_Enlazada"/>
+    </widget>
+    <addaction name="menuLineales"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuEstructuras"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionLista_Enlazada">
+   <property name="text">
+    <string>Lista Enlazada</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
