@@ -41,4 +41,5 @@ class OperacionesLista:
             self.resultado = f"Elemento '{eliminado}' eliminado del final de la lista."
         else:
             self.resultado = "La lista está vacía. No hay elementos para eliminar."
+            
 

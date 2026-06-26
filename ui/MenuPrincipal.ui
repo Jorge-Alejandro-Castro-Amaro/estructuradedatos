@@ -114,7 +114,14 @@ QMenu::right-arrow {
      </property>
      <addaction name="actionLista_Enlazada"/>
     </widget>
+    <widget class="QMenu" name="menuStack">
+     <property name="title">
+      <string>Stack</string>
+     </property>
+     <addaction name="actionPila_2"/>
+    </widget>
     <addaction name="menuLineales"/>
+    <addaction name="menuStack"/>
     <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
@@ -129,6 +136,11 @@ QMenu::right-arrow {
   <action name="actionLista_Enlazada">
    <property name="text">
     <string>Lista Enlazada</string>
+   </property>
+  </action>
+  <action name="actionPila_2">
+   <property name="text">
+    <string>Pila</string>
    </property>
   </action>
  </widget>
