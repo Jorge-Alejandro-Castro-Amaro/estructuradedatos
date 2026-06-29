@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>623</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Ventana principal --- */
+QDialog {
+    background-color: #0d0d0d;   /* negro profundo */
+    color: #FFD700;              /* dorado */
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+}
+
+/* --- Etiquetas --- */
+QLabel {
+    color: #FFD700;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* --- Campos de entrada --- */
+QLineEdit {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #FFD700;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #FFA500;   /* dorado más intenso al enfocarse */
+    background-color: #262626;
+}
+
+/* --- Botones --- */
+QPushButton {
+    background-color: #FFD700;   /* dorado */
+    color: #000000;              /* texto negro */
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: #FFC107;   /* dorado más oscuro */
+    color: #0d0d0d;
+}
+
+QPushButton:pressed {
+    background-color: #FFA500;   /* naranja/dorado intenso */
+    color: #ffffff;
+}
+
+/* --- Resultado --- */
+#lbl_resultado {
+    color: #FFD700;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #1a1a1a;
+    border: 1px solid #FFD700;
+    border-radius: 6px;
+    padding: 6px;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>261</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Ingresa una Expresion Infija:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_expresion">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>80</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_convertir">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>180</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Convertir</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>270</y>
+     <width>511</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

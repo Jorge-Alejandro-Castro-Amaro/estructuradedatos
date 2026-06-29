@@ -36,3 +36,6 @@ class OperacionesPila:
             temp = temp.next
         self.resultado = " -> ".join(elementos)
         return self.resultado
+    
+    def is_empty(self):
+        return self.lista.head is None

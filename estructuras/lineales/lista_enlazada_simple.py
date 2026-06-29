@@ -56,4 +56,3 @@ class LinkedList(object):
         temp.next = None
         self.tail = temp
         return eliminado
-    
