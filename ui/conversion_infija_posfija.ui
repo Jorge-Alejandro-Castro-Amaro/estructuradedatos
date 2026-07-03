@@ -14,83 +14,90 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* --- Ventana principal --- */
-QDialog {
-    background-color: #0d0d0d;   /* negro profundo */
-    color: #FFD700;              /* dorado */
-    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
-    font-size: 14px;
-    border: 2px solid #FFD700;
-    border-radius: 8px;
-}
+   <string notr="true">/* ================================================
+   HOJA DE ESTILO COMPLETA: MODO OSCURO CORPORATIVO
+   ================================================ */
 
-/* --- Etiquetas --- */
-QLabel {
-    color: #FFD700;
+/* --- FONDO PRINCIPAL DE LA VENTANA --- */
+QWidget {
+    background-color: #111827; /* Negro Premium/Gris muy oscuro */
+    color: #F3F4F6; /* Texto general en gris claro para alta legibilidad */
+    font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
     font-size: 13px;
-    font-weight: bold;
 }
 
-/* --- Campos de entrada --- */
+/* --- ESTILO PARA ENTRADAS DE TEXTO (QLineEdit) --- */
 QLineEdit {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border: 1px solid #FFD700;
+    background-color: #1F2937; /* Un gris un poco más claro que el fondo */
+    border: 1px solid #374151; /* Borde sutil */
     border-radius: 6px;
-    padding: 6px;
+    padding: 8px 12px;
+    color: #FFFFFF; /* Texto blanco puro al escribir */
+    selection-background-color: #4B5563;
 }
 
 QLineEdit:focus {
-    border: 1px solid #FFA500;   /* dorado más intenso al enfocarse */
-    background-color: #262626;
+    border: 2px solid #9CA3AF; /* Borde gris claro brillante al enfocar */
+    background-color: #1F2937;
 }
 
-/* --- Botones --- */
+QLineEdit:disabled {
+    background-color: #111827;
+    color: #4B5563;
+    border: 1px solid #1F2937;
+}
+
+/* --- ESTILO PARA BOTONES (QPushButton) --- */
 QPushButton {
-    background-color: #FFD700;   /* dorado */
-    color: #000000;              /* texto negro */
-    border-radius: 6px;
-    padding: 8px 14px;
+    background-color: #374151; /* Botón gris grafito oscuro */
+    color: #FFFFFF;
     font-weight: bold;
-    transition: all 0.3s ease;
+    border: 1px solid #4B5563; /* Borde que le da tridimensionalidad */
+    border-radius: 6px;
+    padding: 10px 20px;
 }
 
 QPushButton:hover {
-    background-color: #FFC107;   /* dorado más oscuro */
-    color: #0d0d0d;
+    background-color: #4B5563; /* Se aclara ligeramente al pasar el mouse */
 }
 
 QPushButton:pressed {
-    background-color: #FFA500;   /* naranja/dorado intenso */
-    color: #ffffff;
+    background-color: #1F2937; /* Se oscurece al hacer clic */
+    border: 1px solid #374151;
 }
 
-/* --- Resultado --- */
-#lbl_resultado {
-    color: #FFD700;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #1a1a1a;
-    border: 1px solid #FFD700;
-    border-radius: 6px;
-    padding: 6px;
+QPushButton:disabled {
+    background-color: #111827;
+    color: #4B5563;
+    border: 1px solid #1F2937;
 }
-</string>
+
+/* --- ESTILO PARA ETIQUETAS / TEXTOS (QLabel) --- */
+QLabel {
+    background-color: transparent; /* Evita que la etiqueta tape el fondo */
+    color: #E5E7EB; /* Gris claro suave para no cansar la vista */
+}
+
+/* Clase opcional para títulos destacados (asigna este objectName en Qt Designer) */
+QLabel#tituloPrincipal {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF; /* Blanco puro para el título */
+}</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>70</y>
+     <y>10</y>
      <width>261</width>
      <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI,Arial,sans-serif</family>
      <pointsize>-1</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -104,7 +111,7 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>80</y>
+     <y>20</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -114,13 +121,15 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>180</y>
+     <y>90</y>
      <width>171</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI,Arial,sans-serif</family>
+     <pointsize>-1</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -133,7 +142,44 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>270</y>
+     <y>160</y>
+     <width>511</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_evaluar">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>280</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI,Arial,sans-serif</family>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Calcular</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado_evaluar">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>350</y>
      <width>511</width>
      <height>91</height>
     </rect>

@@ -1,22 +1,14 @@
-# Conversión de Expresiones Infijas a Posfijas
-
-## ¿Qué es una expresión infija?
-Es la forma común de escribir operaciones:
-
-
-## ¿Qué es una expresión posfija?
-Es una notación donde los operadores van después de los operandos:
-
-
-## Algoritmo (Shunting Yard simplificado)
-1. Leer la expresión de izquierda a derecha.
-2. Si es operando → enviar a la salida.
-3. Si es operador → usar la pila para decidir cuándo sacarlo.
-4. Si es paréntesis → manejar apertura y cierre con la pila.
-5. Al final → vaciar la pila.
-
-## Uso de la pila
-La pila se utiliza para **guardar operadores y paréntesis** mientras se procesa la expresión.  
-Esto asegura que los operadores se coloquen en el orden correcto según su **prioridad**.
-
-Ejemplo:
+El documento explica cómo funciona el algoritmo Shunting-Yard, que convierte una expresión infija (como A + B * C) en una expresión posfija utilizando una pila (Stack).
+Los puntos principales son:
+La pila se utiliza para almacenar temporalmente operadores y paréntesis mientras se procesa la expresión.
+Los operandos (letras o números) se envían directamente a la salida.
+Los paréntesis de apertura ( se apilan.
+Los paréntesis de cierre ) hacen que se desapilen los operadores hasta encontrar el (, el cual se elimina.
+Los operadores (+, -, *, /, $) comparan su prioridad con el operador que está en la cima de la pila. Si el de la pila tiene mayor o igual prioridad, se desapila y se envía a la salida; después se apila el operador actual.
+El documento también describe las funciones principales de la pila:
+Push: agregar un elemento.
+Top/Peek: consultar el elemento superior sin eliminarlo.
+Pop: eliminar y devolver el elemento superior.
+is_empty: verificar si la pila está vacía.
+Como ejemplo, convierte la expresión A + B * C en A B C * +, demostrando que la multiplicación tiene prioridad sobre la suma.
+Finalmente, incluye algunos prompts de evidencia utilizados durante el desarrollo del proyecto para documentar la implementación, la corrección de errores y la integración de la interfaz gráfica con la estructura de datos.
