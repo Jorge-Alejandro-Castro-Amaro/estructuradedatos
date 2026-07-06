@@ -4,6 +4,7 @@ from estructuras.lineales.lista_enlazada_simple import LinkedList
 class ConvertidorExpresiones:
     def __init__(self):
         self.pila = OperacionesPila(LinkedList())
+
         
     def prioridad(self, operador):
         if operador == '$':   # Potencia
@@ -60,7 +61,27 @@ class ConvertidorExpresiones:
 
         return self.pila.pila_eliminar()
     
+    def evaluar_posfija(self, expresion_posfija: str):
+        # Reiniciar pila
+        self.pila = OperacionesPila(LinkedList())
+        
+        for token in expresion_posfija.split():
+            if token.isdigit():  # Operando
+                self.pila.pila_agregar(int(token))
+            else:  # Operador
+                op2 = self.pila.pila_eliminar()
+                op1 = self.pila.pila_eliminar()
+                
+                if token == '+':
+                    self.pila.pila_agregar(op1 + op2)
+                elif token == '-':
+                    self.pila.pila_agregar(op1 - op2)
+                elif token == '*':
+                    self.pila.pila_agregar(op1 * op2)
+                elif token == '/':
+                    self.pila.pila_agregar(op1 // op2)  # División entera
+                elif token == '$':
+                    self.pila.pila_agregar(op1 ** op2)  # Potencia
 
+        return self.pila.pila_eliminar()
 
-
-#PDF, EXPLICACION, PROMTS, EVIDENCIA
