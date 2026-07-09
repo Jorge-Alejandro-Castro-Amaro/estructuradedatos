@@ -1,8 +1,9 @@
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import uic
 from load.load_interfaz import LoadInterfaz 
-from load.load_pila import LoadInterfazPila
-from load.load_conversion_infija_posfija import LoadInterfazPila
+from load.load_pila import LoadInterfazPila, LoadInterfazPila
+from load.load_conversion_infija_posfija import LoadInterfazConversion
+from load.load_queue import LoadInterfazQueue
 
 class MenuPrincipal(QMainWindow):
     def __init__(self):
@@ -12,7 +13,8 @@ class MenuPrincipal(QMainWindow):
         # Conectar acción del menú
         self.actionLista_Enlazada.triggered.connect(self.abrir_interfaz)
         self.actionPila_2.triggered.connect(self.abrir_interfazpila)
-        self.actionConversion_Infija_Posfija.triggered.connect(self.abrir_interfazpila)
+        self.actionConversion_Infija_Posfija.triggered.connect(self.abrir_conversion)
+        self.actionQueue.triggered.connect(self.abrir_interfaz_queue)
         
     def abrir_interfaz(self):
         self.interfaz = LoadInterfaz()
@@ -22,8 +24,13 @@ class MenuPrincipal(QMainWindow):
         self.pila = LoadInterfazPila()
         self.pila.show()
         
-    def abrir_interfazconversion(self):
-        self.conversion = LoadInterfazPila()
+    def abrir_conversion(self):
+        self.conversion = LoadInterfazConversion()
         self.conversion.show()
+        
+    def abrir_interfaz_queue(self):
+        self.queue = LoadInterfazQueue()
+        self.queue.show()
+        
         
     

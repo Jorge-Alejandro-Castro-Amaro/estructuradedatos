@@ -1,9 +1,8 @@
 from PyQt5.QtWidgets import QDialog
 from PyQt5 import uic
-from menus.menu_pila import OperacionesPila
 from estructuras.lineales.conversion_expresiones import ConvertidorExpresiones
 
-class LoadInterfazPila(QDialog):
+class LoadInterfazConversion(QDialog):
     def __init__(self):
         super().__init__()
         self.ui = uic.loadUi('ui/conversion_infija_posfija.ui', self)

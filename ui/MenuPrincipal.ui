@@ -120,6 +120,7 @@ QMenu::right-arrow {
      </property>
      <addaction name="actionPila_2"/>
      <addaction name="actionConversion_Infija_Posfija"/>
+     <addaction name="actionQueue"/>
     </widget>
     <addaction name="menuLineales"/>
     <addaction name="menuStack"/>
@@ -147,6 +148,11 @@ QMenu::right-arrow {
   <action name="actionConversion_Infija_Posfija">
    <property name="text">
     <string>Conversion Infija-Posfija</string>
+   </property>
+  </action>
+  <action name="actionQueue">
+   <property name="text">
+    <string>Queue</string>
    </property>
   </action>
  </widget>
