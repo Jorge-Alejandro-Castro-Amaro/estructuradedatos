@@ -32,3 +32,5 @@ class LoadInterfazConversion(QDialog):
             self.lbl_resultado_evaluar.setText(f"Resultado: {resultado}")
         except Exception as e:
             self.lbl_resultado_evaluar.setText(f"Error: {str(e)}")
+            
+    

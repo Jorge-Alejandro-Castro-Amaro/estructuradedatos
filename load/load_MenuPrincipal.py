@@ -4,6 +4,7 @@ from load.load_interfaz import LoadInterfaz
 from load.load_pila import LoadInterfazPila, LoadInterfazPila
 from load.load_conversion_infija_posfija import LoadInterfazConversion
 from load.load_queue import LoadInterfazQueue
+from load.load_banco import LoadBanco
 
 class MenuPrincipal(QMainWindow):
     def __init__(self):
@@ -15,6 +16,7 @@ class MenuPrincipal(QMainWindow):
         self.actionPila_2.triggered.connect(self.abrir_interfazpila)
         self.actionConversion_Infija_Posfija.triggered.connect(self.abrir_conversion)
         self.actionQueue.triggered.connect(self.abrir_interfaz_queue)
+        self.actionBanco.triggered.connect(self.abrir_interfaz_banco)
         
     def abrir_interfaz(self):
         self.interfaz = LoadInterfaz()
@@ -31,6 +33,10 @@ class MenuPrincipal(QMainWindow):
     def abrir_interfaz_queue(self):
         self.queue = LoadInterfazQueue()
         self.queue.show()
+        
+    def abrir_interfaz_banco(self):
+        self.banco = LoadBanco()
+        self.banco.show()
         
         
     
