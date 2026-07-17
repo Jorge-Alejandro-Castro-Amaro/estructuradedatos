@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InterfazImpresion</class>
+ <widget class="QDialog" name="InterfazImpresion">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cola de Impresión</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==========================================================================
+   TEMA PREMIUM NEGRO &amp; DORADO
+   ========================================================================== */
+
+QWidget {
+    background-color: #121212;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #E8D9A8;
+}
+
+/* ==========================================================================
+   ETIQUETAS / QLABEL
+   ========================================================================== */
+
+QLabel {
+    background-color: transparent;
+    color: #D4AF37;
+    font-weight: 500;
+    padding: 2px;
+}
+
+/* Títulos */
+QLabel#sectionTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F5D76E;
+    padding-bottom: 10px;
+}
+
+/* ==========================================================================
+   CAMPOS DE TEXTO / QLINEEDIT
+   ========================================================================== */
+
+QLineEdit {
+    background-color: #1E1E1E;
+    color: #F5E6B3;
+    border: 1px solid #6E5A1E;
+    border-radius: 8px;
+    padding: 8px 12px;
+    selection-background-color: #D4AF37;
+    selection-color: #121212;
+}
+
+QLineEdit:focus {
+    border: 2px solid #D4AF37;
+    background-color: #252525;
+}
+
+QLineEdit:disabled {
+    background-color: #1A1A1A;
+    color: #666666;
+    border: 1px solid #333333;
+}
+
+/* ==========================================================================
+   BOTONES / QPUSHBUTTON
+   ========================================================================== */
+
+QPushButton {
+    background-color: #D4AF37;
+    color: #121212;
+    font-weight: bold;
+    border: 1px solid #F5D76E;
+    border-radius: 8px;
+    padding: 8px 18px;
+}
+
+QPushButton:hover {
+    background-color: #E6C65C;
+    border: 1px solid #FFD700;
+}
+
+QPushButton:pressed {
+    background-color: #B8941F;
+    padding-top: 9px;
+    padding-left: 19px;
+}
+
+QPushButton:disabled {
+    background-color: #3A3A3A;
+    color: #777777;
+    border: 1px solid #555555;
+}
+
+/* ==========================================================================
+   COMBOBOX
+   ========================================================================== */
+
+QComboBox {
+    background-color: #1E1E1E;
+    color: #F5E6B3;
+    border: 1px solid #6E5A1E;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+QComboBox:hover {
+    border: 1px solid #D4AF37;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+/* ==========================================================================
+   TABLAS / QTABLEWIDGET
+   ========================================================================== */
+
+QTableWidget {
+    background-color: #1A1A1A;
+    color: #F5E6B3;
+    gridline-color: #444444;
+    border: 1px solid #6E5A1E;
+    border-radius: 6px;
+}
+
+QHeaderView::section {
+    background-color: #D4AF37;
+    color: #121212;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   SCROLLBAR
+   ========================================================================== */
+
+QScrollBar:vertical {
+    background: #1A1A1A;
+    width: 12px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #D4AF37;
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #F5D76E;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* ==========================================================================
+   GROUPBOX
+   ========================================================================== */
+
+QGroupBox {
+    color: #D4AF37;
+    border: 1px solid #6E5A1E;
+    border-radius: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 6px;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="txt_usuario">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>200</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Usuario</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_documento">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Documento</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_paginas">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>200</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Número de páginas</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_agregar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>20</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar a la cola</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>60</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir siguiente</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_consultar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>100</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar frente</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbl_trabajos">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>430</width>
+     <height>150</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_total">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>200</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0 trabajos pendientes</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_mensajes">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>430</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mensajes del sistema...</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

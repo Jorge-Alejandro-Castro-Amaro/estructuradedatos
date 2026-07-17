@@ -5,6 +5,7 @@ from load.load_pila import LoadInterfazPila, LoadInterfazPila
 from load.load_conversion_infija_posfija import LoadInterfazConversion
 from load.load_queue import LoadInterfazQueue
 from load.load_banco import LoadBanco
+from load.load_impresion import LoadColaImpresion
 
 class MenuPrincipal(QMainWindow):
     def __init__(self):
@@ -17,6 +18,7 @@ class MenuPrincipal(QMainWindow):
         self.actionConversion_Infija_Posfija.triggered.connect(self.abrir_conversion)
         self.actionQueue.triggered.connect(self.abrir_interfaz_queue)
         self.actionBanco.triggered.connect(self.abrir_interfaz_banco)
+        self.actionCola_de_Impresion.triggered.connect(self.abrir_interfaz_impresion)
         
     def abrir_interfaz(self):
         self.interfaz = LoadInterfaz()
@@ -39,4 +41,6 @@ class MenuPrincipal(QMainWindow):
         self.banco.show()
         
         
-    
+    def abrir_interfaz_impresion(self):
+        self.impresion = LoadColaImpresion()
+        self.impresion.show()
